@@ -105,11 +105,12 @@ Your journey will take you through the wildness of the American Midwest and acro
 > 🧨 Before you click the "Assessment Complete" button on the Learning Platform, add your answers below for each question and make a commit. It is your option to request a face-to-face meeting with a coach for a vocabulary review.
 
 1. In the **main** module, one of the first lines of code is `const drovers = hireDrovers(cattleToDrive)`. Explain what the value of the `drovers` variable is when that line of code runs.
-   > Your answer here
+   > The value of the 'drovers' variable is the return value of the hireDrovers() function called with 'cattleToDrive' passed in as its argument. 
 2. At the bottom of the main module, you will see the following code - `for (const drover of drovers)`. Explain what the values of both the `drover` and the `drovers` variables are.
-   > Your answer here
+   > The value of 'drovers' is an array of objects created when the hireDrovers() function is called [on line 5 of main.js module] with cattleToDrive passed in as its argument. 'drovers' is the iterable - the object(in this case an array with 5 indexes, each of which is an object with multiple key/value pairs) in which all of its elements are iterated over
+   > In each iteration of the for...of loop, the objects that make up the 'drovers' array are stored in a new variable - 'drover', and the current object's properties are the values of the current 'drover' variable being iterated over
 3. In the **journey** module, there is a `journeyMaker()` function. In that function, there is a variable named `areas` which will have the value of an object. Use your debugger to show what the value of each key is on that object. Use [Loom](https://www.loom.com) to record your session.
-   > Your public Loom URL here
+   > https://www.loom.com/share/ef461bf4aa9f4725916cb1103d3ae384?sid=8382e67d-a4fb-442b-86c5-ebd1fbb26421
 4. Also in the **journey** module, there is the following code:
    ```js
    for (let forestNumber = 0; forestNumber < areas.forests; forestNumber++) {
@@ -117,11 +118,11 @@ Your journey will take you through the wildness of the American Midwest and acro
    }
    ```
    Explain this code with your best vocabulary.
-   > Your answer here
+   > This code is a for loop inside of the 'journeyMaker()' function. Outside of the 'journeyMaker()' function, another function called 'createForests()' is defined, returning a random integer between 1 and 2 when it is called. 'createForests()' is called inside of the 'journeyMaker()' function inside the assignment of the 'areas' variable, setting the value of the 'forests' key to the return value of 'createForests()'. When the for loop executes, it will push the string 'forest' to the journey array as many times as the loop is set to run. The loop will begin incrementing at 0, it will stop running before the incrementor is equal to areas.forests (which is the value of the forests property in the areas object, aka the return value of the createForests() function), and it will increment by one each time the body of the loop executes.
 5. Explain the value of the `database` variable in the **database** module. Be as comprehensive as possible.
-   > Your answer here
+   > The value of the 'database' variable is an object consisting of two properties. The first property in the 'database' object has a key of 'cattleTypes', and its value is an array consisting of four objects, each with unique 'id' and 'breed' properties. The second key/value pair in the database object has a key of 'drovers', and its value is an array of 50 objects, each with a unique 'id', as well as 'first_name', 'last_name', and 'gender' properties.
 6. In the **drovers** module, there is a `hireDrovers()` function. You will notice the following code on that line - `(herdSize)`. What is that defining, and where does it get its value?
-   > Your answer here
+   > '(herdSize)' is defining a parameter for the hireDrovers() function, which is a number in this case. It gets its value (a number) from the argument passed in when the function is called on line 5 of the main.js module.
 
 
 ## Final Step
